@@ -1,0 +1,14 @@
+<h3> Number of completed Todos, per user:</h3>
+<ul>
+<% @user_completed_counts.each do |user_id, count| %>
+  <li>User <%= user_id %>: <%= count %></li>
+<% end %>
+</ul>
+<% if @most_completed_user_ids %>
+  <h5>User(s) with the most completed Todos:</h5>
+  <ul>
+    <% @most_completed_user_ids.each do |user_id| %>
+      <li>User <%= user_id %></li>
+    <% end %>
+  </ul>
+<% end %>
